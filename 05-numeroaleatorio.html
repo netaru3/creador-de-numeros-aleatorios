@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de números aleatorios</title>
+</head>
+<body>
+    <h1>Generador de números aleatorios</h1>
+    <p>Indique mínimo</p>
+    <input type="number" id="minimo">
+    <p>indique máximo</p>
+    <input type="number" id="maximo">
+    <p>Su número aleatorio es:</p> <button onclick="numero()" id="boton">generar numero</button>
+    <p id="numeroaleatorio">aaa</p>
+    
+    <script>
+       function numero() {let minimo= Number(document.getElementById("minimo").value);
+        let maximo= Number(document.getElementById("maximo").value);
+        let numeroaleatorio=Number(document.getElementById("numeroaleatorio").textContent);
+        if(minimo>=maximo){alert("Escriba un número mínimo")}
+    if(minimo<0 || maximo<0){alert("ponga números positivos")}
+    let numeroaleatorioreal=Math.round(Math.random()*maximo)
+    let intentos=0
+    while(numeroaleatorioreal<minimo){ numeroaleatorioreal= Math.round(Math.random()*maximo);
+        console.log(intentos);++intentos
+}
+document.getElementById("numeroaleatorio").textContent=numeroaleatorioreal
+}
+    </script>
+</body>
+</html>
