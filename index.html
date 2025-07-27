@@ -18,12 +18,14 @@
        function numero() {let minimo= Number(document.getElementById("minimo").value);
         let maximo= Number(document.getElementById("maximo").value);
         let numeroaleatorio=Number(document.getElementById("numeroaleatorio").textContent);
-        if(minimo>=maximo){alert("Escriba un número mínimo")}
+        if(Math.roundminimo>=maximo){alert("Escriba un número mínimo")}
     if(minimo<0 || maximo<0){alert("ponga números positivos")}
+    if(maximo==0){alert("escriba un número máximo")}
     let numeroaleatorioreal=Math.round(Math.random()*maximo)
     let intentos=0
-    while(numeroaleatorioreal<minimo){ numeroaleatorioreal= Math.round(Math.random()*maximo);
-        console.log(intentos);++intentos
+    while(Math.round(numeroaleatorioreal)<Math.round(minimo)){ 
+        numeroaleatorioreal= Math.round(Math.random()*maximo);
+        console.log(intentos);++intentos; if(intentos==50){break}
 }
 document.getElementById("numeroaleatorio").textContent=numeroaleatorioreal
 }
