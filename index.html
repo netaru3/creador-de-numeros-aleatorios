@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de números aleatorios</title>
+    <style>body{background: linear-gradient(to bottom, rgb(247, 242, 200), #ffffff);
+height: 600px;}</style>
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/10323/10323435.png">
+<link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/10323/10323435.png">
 </head>
 <body>
     <h1>Generador de números aleatorios</h1>
-    <p>Indique mínimo</p>
-    <input type="number" id="minimo">
-    <p>indique máximo</p>
-    <input type="number" id="maximo">
-    <p>Su número aleatorio es:</p> <button onclick="numero()" id="boton">generar numero</button>
-    <p id="numeroaleatorio">aaa</p>
+    <p>Indique mínimo:</p>
+    <input type="number" id="minimo" style="width: 40px;" value="0">
+    <p>indique máximo:</p>
+    <input type="number" id="maximo" value="100" style="width: 40px;">
+    <p style="display: inline;">Su número aleatorio es:</p> 
+    <button onclick="numero()" id="boton" style="display: inline;
+    background-color:rgb(247, 242, 200);
+    border-color:black;">generar numero</button>
+    <p id="numeroaleatorio">Numero aleatorio</p>
     
     <script>
        function numero() {let minimo= Number(document.getElementById("minimo").value);
